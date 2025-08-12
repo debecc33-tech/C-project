@@ -1,6 +1,5 @@
 # Real Estate Development Project
 
-![Logo](public/assets/images/logo.png)
 
 ## 🏢 About The Project
 
