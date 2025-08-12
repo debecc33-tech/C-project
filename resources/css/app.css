@@ -35,19 +35,6 @@
     .focus-visible {
         @apply outline-2 outline-orange-500 outline-offset-2;
     }
-
-    /* Scrollbar Styles */
-    ::-webkit-scrollbar {
-        @apply w-2;
-    }
-
-    ::-webkit-scrollbar-track {
-        @apply bg-gray-100;
-    }
-
-    ::-webkit-scrollbar-thumb {
-        @apply bg-orange-500 hover:bg-orange-600 transition-colors rounded-full;
-    }
 }
 
 /* ==========================================
