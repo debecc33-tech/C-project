@@ -41,7 +41,7 @@ A modern real estate development platform built with Laravel and modern frontend
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/real-estate-project.git
+   git clone https://github.com/SlowWebDev/C-project.git
    cd real-estate-project
    ```
 
