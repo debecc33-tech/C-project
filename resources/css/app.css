@@ -1,0 +1,230 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==========================================
+   BASE CSS
+   ========================================== */
+@layer base {
+    :root {
+        --primary: #FF6B00;
+        --primary-hover: #000000;
+    }
+
+    html {
+        @apply scroll-smooth;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+        @apply font-sans leading-relaxed overflow-x-hidden;
+        font-family: 'Inter', sans-serif;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-bold tracking-tight;
+    }
+
+    /* Selection Styles */
+    ::selection {
+        @apply bg-orange-500 text-white;
+    }
+
+    /* Focus Styles */
+    .focus-visible {
+        @apply outline-2 outline-orange-500 outline-offset-2;
+    }
+
+    /* Scrollbar Styles */
+    ::-webkit-scrollbar {
+        @apply w-2;
+    }
+
+    ::-webkit-scrollbar-track {
+        @apply bg-gray-100;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        @apply bg-orange-500 hover:bg-orange-600 transition-colors rounded-full;
+    }
+}
+
+/* ==========================================
+   PRINT STYLES
+   ========================================== */
+@media print {
+
+    body {
+        font-size: 12pt;
+        line-height: 1.4;
+    }
+
+}
+
+/* ==========================================
+   COMPONENTS 
+   ========================================== */
+@layer components {
+    
+    /* Layout */
+    .container {
+        @apply max-w-7xl mx-auto;
+    }
+
+    /* ==========================================
+       Navigation 
+       ========================================== */
+  .nav-base {
+    @apply text-white font-bold uppercase tracking-wider 
+           transition-all duration-300 relative inline-block;
+}
+
+.nav-desktop {
+    @apply nav-base text-xs sm:text-sm md:text-[13px]
+           px-2.5 sm:px-3 md:px-4
+           py-1 sm:py-1.5 md:py-2
+           rounded-xl transition-all duration-200 font-bold;
+}
+
+.nav-link {
+    @apply relative inline-block;
+}
+
+.nav-link::before,
+.nav-link::after {
+    content: '›';
+    @apply absolute text-white opacity-0 pointer-events-none text-2xl font-extrabold;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-link::before {
+    @apply top-0 right-0;
+    transform: translate(0, 0) rotate(-45deg) scale(0.9);
+    transform-origin: center;
+}
+
+.nav-link::after {
+    @apply bottom-0 left-0;
+    transform: translate(0, 0) rotate(135deg) scale(0.9);
+    transform-origin: center;
+}
+
+.nav-link:hover::before {
+    @apply opacity-90;
+    transform: translate(2px, -2px) rotate(-45deg) scale(1);
+}
+
+.nav-link:hover::after {
+    @apply opacity-90;
+    transform: translate(-30%, 30%) rotate(135deg) scale(1);
+}
+
+    /* Navbar Glass Effect */
+    .navbar-glass {
+        @apply border border-white/10;
+        background: rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+    }
+
+    /* ==========================================
+       Mobile Menu 
+       ========================================== */
+    .drawer-header {
+        @apply sticky top-0 px-6 py-4 bg-white relative;
+    }
+
+    .drawer-header::after {
+        content: '';
+        @apply absolute left-0 right-0 bottom-0 h-px bg-gray-100;
+    }
+
+    .drawer-nav {
+        @apply pt-3;
+    }
+
+    .drawer-item {
+        @apply block px-6 py-[0.875rem] text-[13px] font-medium relative text-gray-700 tracking-wide 
+               transition-colors duration-150 hover:text-black;
+    }
+
+    .drawer-item::after {
+        content: '';
+        @apply absolute left-1/2 -translate-x-1/2 w-[calc(100%-3rem)] bottom-0 h-px bg-gray-200;
+    }
+
+    .drawer-item:last-child::after {
+        content: '';
+        @apply bg-transparent;
+    }
+
+    .drawer-item.active {
+        @apply text-black;
+    }
+
+}
+    /* ==========================================
+       Hero section
+       ========================================== */
+.btn-hero {
+@apply relative inline-flex items-center px-3 py-3 text-base font-medium text-white bg-black  border border-white overflow-hidden transition-transform duration-300 translate-y-8 ;
+
+}
+
+/* top white line */
+.btn-hero::before {
+    content: '';
+    @apply absolute top-0 left-0 w-full h-[2px] bg-white;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s ease;
+}
+
+/* bottom orange line */
+.btn-hero::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-[2px] bg-[#FF6B00];
+    box-shadow: 0 0 10px rgba(255, 107, 0, 0.8);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease;
+}
+
+/* Hover Animation */
+.btn-hero:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.btn-hero:hover::after {
+    transform: scaleX(1);
+    transform-origin: right;
+}
+
+
+/* ==========================================
+   RESPONSIVE MEDIA 
+   ========================================== */
+
+/* Medium Devices - Tablets */
+@media (max-width: 768px) {
+    .hero-swiper .swiper-pagination-bullet {
+        @apply w-2.5 h-2.5 mx-1;
+    }
+    
+    .hero-swiper .swiper-pagination-bullet-active {
+        @apply w-3.5 h-3.5;
+    }
+}
+
+/* Small Devices - Mobile */
+@media (max-width: 640px) {
+    .hero-swiper h1 span:first-child {
+        @apply text-4xl;
+    }
+    
+    .hero-swiper h1 span:last-child {
+        @apply text-3xl;
+    }
+}
