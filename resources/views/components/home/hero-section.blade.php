@@ -1,5 +1,3 @@
-@props(['heroData'])
-
 <section class="relative h-screen overflow-hidden">
     <div class="swiper hero-swiper h-full">
         <div class="swiper-wrapper">
