@@ -1,6 +1,6 @@
 {
     "$schema": "https://getcomposer.org/schema.json",
-    "name": "C-project",
+    "name": "cproject",
     "type": "project",
     "description": "its an a project by 1slow",
     "require": {
