@@ -23,6 +23,13 @@ jobs:
       # 4️⃣ Build assets
       - run: npm run build
 
+      # Prepare files for deployment
+      - name: Prepare files
+        run: |
+          cp public/index.html public/404.html
+          cp -r public/build/* public/
+          cp public/.htaccess public/build/
+
       # 5️⃣ Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
