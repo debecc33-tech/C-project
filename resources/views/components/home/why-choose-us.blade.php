@@ -3,8 +3,8 @@
         <!-- Image section -->
         <div class="why-choose-image" data-aos="fade-right" data-aos-duration="1000" data-aos-offset="200">
             <img 
-                src="/assets/images/why-choose-us/why-choose-us-text.png" 
-                alt="Why Choose Us"
+           src="{{asset('assets/images/why-choose-us/why-choose-us-text.png')}}" 
+            alt="Why Choose Us"
             >
         </div>
         
