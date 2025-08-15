@@ -58,3 +58,22 @@ new Swiper('.projects-swiper', {
         1280: { slidesPerView: 3, spaceBetween: 40 }
     }
 });
+// Partners Infinite Loop
+new Swiper('.partners-swiper', {
+    modules: [Autoplay],
+    loop: true,
+    centeredSlides: true,
+    slidesPerView: 3,
+    spaceBetween: 30,
+    speed: 2000,
+    autoplay: {
+        delay: 0,
+        disableOnInteraction: false
+    },
+    allowTouchMove: false,
+    breakpoints: {
+        320: { slidesPerView: 1 },
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 }
+    }
+});

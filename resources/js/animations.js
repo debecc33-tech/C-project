@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
        General Scroll Animations
     --------------------------- */
     gsap.utils.toArray('[data-scroll]').forEach(el => {
-        gsap.fromTo(el, { y: 30, opacity: 0 }, {
+        gsap.fromTo(el, { y: 30, opacity: 1 }, {
             y: 0, opacity: 1, duration: 0.8,
             scrollTrigger: { trigger: el, start: "top 90%", once: true }
         });
