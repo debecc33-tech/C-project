@@ -1,22 +1,14 @@
 import './bootstrap';
 import Swiper from 'swiper';
-import { Autoplay, Pagination } from 'swiper/modules';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 import 'aos/dist/aos.css';
 import './animations';
 
 document.addEventListener('DOMContentLoaded', () => {
     
-    // Hero Swiper
-    new Swiper('.hero-swiper', {
-        modules: [Autoplay, Pagination],
-        loop: true,
-        speed: 800,
-        autoplay: { delay: 4000, disableOnInteraction: false },
-        pagination: { el: '.swiper-pagination', clickable: true }
-    });
-
     // Mobile Menu
     const menu = document.querySelector('.mobile-menu');
     const overlay = document.querySelector('.mobile-menu-overlay');
@@ -40,5 +32,29 @@ document.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('keydown', e => e.key === 'Escape' && isOpen && toggle(false));
         window.addEventListener('resize', () => window.innerWidth >= 1024 && isOpen && toggle(false));
         menu.addEventListener('click', e => e.stopPropagation());
+    }
+});
+
+    // Hero Swiper
+    new Swiper('.hero-swiper', {
+        modules: [Autoplay, Pagination],
+        loop: true,
+        speed: 800,
+        autoplay: { delay: 4000, disableOnInteraction: false },
+        pagination: { el: '.swiper-pagination', clickable: true }
+    });
+
+    // Projects Swiper
+new Swiper('.projects-swiper', {
+    modules: [Navigation, Autoplay],
+    loop: true,
+    speed: 800,
+    autoplay: { delay: 2000, disableOnInteraction: false, pauseOnMouseEnter: true },
+    grabCursor: true,
+    on: { init() { this.el.classList.add('group'); } },
+    breakpoints: {
+        640: { slidesPerView: 2 },
+        1024: { slidesPerView: 3, spaceBetween: 32 },
+        1280: { slidesPerView: 3, spaceBetween: 40 }
     }
 });

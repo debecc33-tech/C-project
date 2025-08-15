@@ -5,5 +5,6 @@
 @section('content')
     <x-home.hero-section/>
     <x-home.why-choose-us />
-    <x-home.ceo-message />    
+    <x-home.ceo-message />
+    <x-home.our-projects />
 @endsection
