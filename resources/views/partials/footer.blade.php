@@ -8,7 +8,7 @@
             
             <!-- Logo + Description -->
             <div class="lg:col-span-4">
-                <img src="https://tgdevelopments.net/front/TG%20LOGO%20FINAL%20black.png" 
+                <img src="https://tgdevelopments.net/front/TG%20LOGO%20FINAL%20black.png" alt="company Logo" 
                      alt="TG Developments Logo" 
                      class="w-44 h-auto mb-4">
                 <p class="text-gray-600 text-sm leading-relaxed max-w-sm">
@@ -31,8 +31,8 @@
             <div class="footer-section">
                 <h3 class="footer-heading">DEVELOPMENTS</h3>
                 <ul class="footer-links">
-                    <li><a href="#" class="footer-link">RESIDENTIAL</a></li>
-                    <li><a href="#" class="footer-link">COMMERCIAL</a></li>
+                    <li><a href="/" class="footer-link">RESIDENTIAL</a></li>
+                    <li><a href="/" class="footer-link">COMMERCIAL</a></li>
                 </ul>
             </div>
 
@@ -50,11 +50,11 @@
 
         <!-- Social Media -->
         <div class="footer-social">
-            <a href="#" class="footer-social-link"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="footer-social-link"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="footer-social-link"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" class="footer-social-link"><i class="fab fa-tiktok"></i></a>
-            <a href="#" class="footer-social-link"><i class="fab fa-whatsapp"></i></a>
+            <a href="/" class="footer-social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="/" class="footer-social-link"><i class="fab fa-instagram"></i></a>
+            <a href="/" class="footer-social-link"><i class="fab fa-linkedin-in"></i></a>
+            <a href="/" class="footer-social-link"><i class="fab fa-tiktok"></i></a>
+            <a href="/" class="footer-social-link"><i class="fab fa-whatsapp"></i></a>
         </div>
 
         <!-- Copyright -->

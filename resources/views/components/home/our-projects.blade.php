@@ -60,7 +60,11 @@ $projects = [
          data-aos-duration="1000"
          data-swiper-autoplay="3000"
          data-swiper-loop="true"
-         data-swiper-speed="1000">
+         data-swiper-speed="1000"
+         data-swiper-lazy="true"
+         data-swiper-lazy-preloader-class="swiper-lazy-preloader"
+         data-swiper-observer="true"
+         data-swiper-observer-parents="true">
         
         <div class="swiper-wrapper">
             
@@ -70,10 +74,17 @@ $projects = [
                     <div class="project-image-wrapper">
                         <img src="{{ $project['image'] }}" 
                              alt="{{ $project['title'] }}" 
-                             class="project-image">
+                             class="project-image"
+                             loading="lazy"
+                             width="400"
+                             height="300"
+                             decoding="async">
                         <div class="project-overlay"></div>
                         <div class="project-location-badge">
-                            <img src="{{ asset('assets/images/projects/icons/lt.svg') }}" alt="Location">
+                            <img src="{{ asset('assets/images/projects/icons/lt.svg') }}" 
+                                 alt="Location" 
+                                 width="20" 
+                                 height="20">
                             <span class="text-sm font-semibold">{{ $project['Addres'] }}</span>
                         </div>
                         <div class="project-content">
