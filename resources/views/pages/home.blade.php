@@ -8,4 +8,5 @@
     <x-home.ceo-message />
     <x-home.our-projects />
     <x-home.our-partners />
+    <x-home.media-new />
 @endsection
