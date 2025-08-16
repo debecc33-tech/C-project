@@ -1,4 +1,4 @@
-@import url('home/home.css');
+@import url("home/home.css");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,7 +6,6 @@
    BASE CSS
    ========================================== */
 @layer base {
-
     html {
         @apply scroll-smooth;
         -webkit-font-smoothing: antialiased;
@@ -15,14 +14,17 @@
 
     body {
         @apply font-sans leading-relaxed overflow-x-hidden;
-        font-family: 'Inter', sans-serif;
+        font-family: "Inter", sans-serif;
     }
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
         @apply font-bold tracking-tight;
     }
-
 }
-
 
 /* ==========================================
    PRINT STYLES
@@ -43,62 +45,38 @@
         @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
     }
 
-
     /* ==========================================
        Navigation 
        ========================================== */
-  .nav-base {
-    @apply text-white font-bold uppercase tracking-wider 
-           transition-all duration-300 relative inline-block;
-}
-
-.nav-desktop {
-    @apply nav-base text-xs sm:text-sm md:text-[13px]
-           px-2.5 sm:px-3 md:px-4
-           py-1 sm:py-1.5 md:py-2
-           rounded-xl transition-all duration-200 font-bold;
-}
-
-.nav-link {
-    @apply relative inline-block;
-}
-
-.nav-link::before,
-.nav-link::after {
-    content: '›';
-    @apply absolute text-white opacity-0 pointer-events-none text-2xl font-extrabold;
-    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.nav-link::before {
-    @apply top-0 right-0;
-    transform: translate(0, 0) rotate(-45deg) scale(0.9);
-    transform-origin: center;
-}
-
-.nav-link::after {
-    @apply bottom-0 left-0;
-    transform: translate(0, 0) rotate(135deg) scale(0.9);
-    transform-origin: center;
-}
-
-.nav-link:hover::before {
-    @apply opacity-90;
-    transform: translate(2px, -2px) rotate(-45deg) scale(1);
-}
-
-.nav-link:hover::after {
-    @apply opacity-90;
-    transform: translate(-30%, 30%) rotate(135deg) scale(1);
-}
-
-    /* Navbar Glass Effect */
-    .navbar-glass {
-        @apply border border-white/10;
-        background: rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(10px);
+    .nav-base {
+        @apply text-white font-bold uppercase tracking-wider 
+         relative inline-block transition-all duration-300;
     }
 
+    /*  navigation links */
+    .nav-desktop {
+        @apply nav-base text-xs sm:text-sm md:text-[13px]
+         px-3 md:px-4
+         py-1.5 md:py-2
+         rounded-md;
+    }
+
+    /* Hover  effect */
+    .nav-link {
+        @apply relative inline-block overflow-hidden;
+    }
+
+    .nav-link::before {
+        content: "";
+        @apply absolute inset-0 rounded-lg bg-white/10;
+        transform: scaleY(0);
+        transform-origin: bottom;
+        transition: transform 0.35s ease-in-out;
+        z-index: -1;
+    }
+    .nav-link:hover::before {
+        transform: scaleY(1);
+    }
     /* ==========================================
        Mobile Menu 
        ========================================== */
@@ -107,7 +85,7 @@
     }
 
     .drawer-header::after {
-        content: '';
+        content: "";
         @apply absolute left-0 right-0 bottom-0 h-px bg-gray-100;
     }
 
@@ -121,29 +99,29 @@
     }
 
     .drawer-item::after {
-        content: '';
+        content: "";
         @apply absolute left-1/2 -translate-x-1/2 w-[calc(100%-3rem)] bottom-0 h-px bg-gray-200;
     }
 
     .drawer-item:last-child::after {
-        content: '';
+        content: "";
         @apply bg-transparent;
     }
 
     .drawer-item.active {
         @apply text-black;
     }
-
 }
 
-    /* ==========================================
+/* ==========================================
        Footer 
        ========================================== */
 
 /* Background image  */
 .footer {
     @apply relative;
-    background: url('https://tgdevelopments.net/front/backgroundWhite-gray-pattern.jpg') center/cover no-repeat;
+    background: url("https://tgdevelopments.net/front/backgroundWhite-gray-pattern.jpg")
+        center/cover no-repeat;
     min-height: 400px;
 }
 
@@ -152,7 +130,7 @@
 .footer-section {
     @apply lg:col-span-3;
 }
-   
+
 /* Section titles */
 
 .footer-heading {
@@ -172,7 +150,6 @@
     @apply text-gray-600 text-sm hover:text-orange-500 transition-colors duration-300;
 }
 
-
 /* Social icons  */
 
 .footer-social {
@@ -184,7 +161,3 @@
 .footer-social-link {
     @apply w-10 h-10 bg-orange-500 hover:bg-orange-600 text-black flex items-center justify-center rounded transition-all duration-300 hover:-translate-y-1;
 }
-
-
-
-
