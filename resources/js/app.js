@@ -156,7 +156,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     const loadAnimationsOnScroll = () => {
         if (!animationsLoaded) {
             loadAnimations();
-            loadFontAwesome();
             animationsLoaded = true;
             window.removeEventListener('scroll', loadAnimationsOnScroll);
         }
