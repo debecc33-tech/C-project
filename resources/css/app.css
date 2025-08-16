@@ -3,7 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Critical CSS Inlining */
+/*  CSS Inlining */
 .hero-swiper { min-height: 100vh; }
 .mobile-menu { will-change: transform; }
 .nav-link { will-change: transform; }
