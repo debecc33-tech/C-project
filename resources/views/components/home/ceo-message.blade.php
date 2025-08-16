@@ -15,7 +15,10 @@
         <img 
           src="{{asset('assets/images/ceo-message/ceo-img.jpeg')}}" 
           class="absolute inset-0 h-full w-full object-contain"
-          alt="CEO - IMG"
+          alt="CEO Message"
+          loading="lazy"
+          decoding="async"
+          sizes="(max-width: 768px) 100vw, 50vw"
         >
       </div>
 

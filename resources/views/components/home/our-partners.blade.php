@@ -22,7 +22,9 @@
                             <div class="swiper-slide flex items-center justify-center">
                                 <img src="{{ asset('assets/images/partners/' . basename($path)) }}" 
                                      alt="Partner Logo" 
-                                     class="h-16 md:h-20 lg:h-24 object-contain opacity-80 hover:opacity-100 transition">
+                                    class="h-16 md:h-20 lg:h-24 object-contain opacity-80 hover:opacity-100 transition"
+                                    loading="lazy"
+                                    decoding="async">
                             </div>
                         @endforeach
                     </div>

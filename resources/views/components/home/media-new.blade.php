@@ -48,7 +48,9 @@ $mediaProjects = [
                                         <img src="{{ $project['image'] }}"
                                              alt="{{ $project['title'] }}"
                                              class="w-full h-full object-cover object-center"
-                                             loading="lazy">
+                                             loading="lazy"
+                                             decoding="async"
+                                             sizes="(max-width: 768px) 100vw, 50vw">
                                     </div>
                                     <!-- Content Section -->
                                     <div class="p-6 md:p-10 flex flex-col justify-center md:order-1">
