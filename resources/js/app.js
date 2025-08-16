@@ -6,6 +6,8 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import 'aos/dist/aos.css';
 import './animations';
+// Icons
+import '@fortawesome/fontawesome-free/css/all.css';
 
 document.addEventListener('DOMContentLoaded', () => {
     

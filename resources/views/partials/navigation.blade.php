@@ -3,11 +3,12 @@
     <div class="container mx-auto px-3 sm:px-4 md:px-5">
         <div class="flex items-center justify-between">
             <!-- Logo -->
-<div class="flex-shrink-0 pl-16">
+<div class="flex-shrink-0 pl-4">
     <a href="{{ route('home') }}" class="flex items-center">
         <img src="{{ asset('assets/images/logo.png') }}" class="h-24 w-auto">
     </a>
-</div>            <!-- Desktop Navigation -->
+</div>
+          <!-- Desktop Navigation -->
             <div class="hidden lg:flex items-center">
                 <div class="flex items-center">
                     <div class="flex items-center space-x-1.5 rounded-full border border-white/20 px-3 py-1.5">
@@ -39,13 +40,14 @@
                 </div>
             </div>
 
-            <!-- Phone Number -->
-            <div class="hidden lg:flex">
-                <a href="tel:16497" class="flex items-center gap-2 text-white rounded-full px-4 py-2 border border-white/10">
-                    <img src="{{ asset('assets/images/svg-icons/phone.svg') }}" class="w-5 h-5" alt="Phone">
-                    <span class="font-medium">16497</span>
-                </a>
-            </div>
+<!-- Phone Number -->
+<div class="flex mt-2 lg:mt-0">
+    <a href="tel:16497" 
+       class="flex items-center gap-2 text-white rounded-full px-4 py-2 border border-white/10">
+        <img src="{{ asset('assets/images/svg-icons/phone.svg') }}" class="w-5 h-5" alt="Phone">
+        <span class="font-medium">16497</span>
+    </a>
+</div>
 
             <!-- Mobile Menu Button -->
             <div class="lg:hidden">

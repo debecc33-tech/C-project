@@ -41,7 +41,7 @@ $mediaProjects = [
                     @foreach($mediaProjects as $project)
                     <div class="swiper-slide">
                         <div class="mx-0 md:mx-2">
-                            <div class="bg-black rounded-xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300">
+                            <div class="bg-[#090909] rounded-xl shadow-lg overflow-hidden group hover:shadow-xl transition-all duration-300">
                                 <div class="flex flex-col md:grid md:grid-cols-2 min-h-[360px] md:min-h-[520px]">
                                     <!-- Image Section -->
                                     <div class="h-48 md:h-auto md:order-2">
